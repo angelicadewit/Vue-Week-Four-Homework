@@ -13,13 +13,18 @@
 	<body>
 		
 		<div id="app">
-			{{message}}
-			<inputField></inputField>
+			<hashtag-input :hashtag="hashtag"></hashtag-input>
+			<status-bar :hashtag="hashtag" :tweet-data="tweetData"></status-bar>
+			<tweet-feed :hashtag="hashtag" :tweet-data="tweetData"></tweet-feed>
 		</div>
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
-		<script src="dist/js/gravatar-component.js"></script>
+		<script src="dist/js/hash-input-component.js"></script>
+		<script src="dist/js/status-bar-component.js"></script>
+		<script src="dist/js/tweetfeed-component.js"></script>
+		<script src="dist/js/tweet-component.js"></script>
 		<script src="dist/js/main.js"></script>
 
 	</body>
